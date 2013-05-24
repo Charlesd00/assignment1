@@ -1,4 +1,9 @@
-import time
+#Assignment1.py/File1.py
+#Version 1.5
+#Author Charles Doolittle
+#Last revision Charles Doolittle at 9:00 may 23, 2013
+#Purpose a spooky text adventure game
+
 
 def displayIntro():
     print ('You awake in a dark forest with no memory of how you got there nor where you are going.')
@@ -9,49 +14,49 @@ def chooseCave():
         print ('Do you start traveling North or south? (1 or 2)')
         cave = raw_input()
     return cave
-
+#initial choice
 def checkCave(chosenCave):
     print ('You begin walking')
-   
+#1st decision tree   
     if chosenCave == "1":
-        print ('You come to some thick Brush do you walk through it or around')
+        print ('You come to some thick Brush do you walk through (1) it or around(2) ')
         chosenCave = raw_input()
-        if chosenCave == "through":
-            print ('You see a rabbit do you follow it or catch it for food')
+        if chosenCave == "1":
+            print ('You see a rabbit do you follow(2) it or catch it for food(1)')
             chosenCave = raw_input()
-            if chosenCave == "catch":
+            if chosenCave == "1":
                 print ('The rabbit king jumps out of nowhere and crushes you')
-            elif chosenCave == "around":
-                print ('gvkj')
-        elif chosenCave == "around":
-            print ('you can continue walking or sit for a rest')
+            elif chosenCave == "2":
+                print ('You follow the rabbit into a trap!')
+        elif chosenCave == "2":
+            print ('you can continue walking(2) or sit for a rest(1)')
             chosenCave = raw_input()
-            if chosenCave == "sit":
+            if chosenCave == "1":
                 print ('You hear your mothers voice, she calls you back into the house for dinner, all this adventuring for nothing!')
             elif chosenCave == "2":
-                print ('you choose 3.4')
-                
+                print ('You fall into a pit, trapped there forever')
+ #2nd division tree               
     elif chosenCave == "2":
-        print('You come to a fallen tree do you use it for shelter or continue')
+        print('You come to a fallen tree do you use it for shelter(1) or continue')
         chosenCave = raw_input()
-        if chosenCave == "shelter":
-            print ('you choose 2.3')
+        if chosenCave == "1":
+            print ('Dou you light a fire(1) or sleep through the cold(2)?')
             chosenCave = raw_input()
-            if chosenCave == "jump":
-                print ('you choose 3.5')
-            elif chosenCave == "bridge":
-                print ('you choose 3.6')
-        elif chosenCave == "continue":
-            print ('you choose 2.4')
+            if chosenCave == "1":
+                print ('A bear uses the fire to find you and east you!')
+            elif chosenCave == "2":
+                print ('You freeze to death oovernight.')
+        elif chosenCave == "2":
+            print ('You continue on and hear voices in the distance, do you go talk to them(1) or run away.')
             chosenCave = raw_input()
-            if chosenCave == "run":
-                print ('you choose 3.7')
-            elif chosenCave == "talk":
-                print ('you choose 3.8')
+            if chosenCave == "1":
+                print ('They are wandering cannibals and eat you alive.')
+            elif chosenCave == "2":
+                print ('You run into slender man and he steals your soul.')
 
 def main():
     
-    
+#Option to restart    
     playAgain = 'yes'
     while playAgain == 'yes' or playAgain == 'y':
         displayIntro()
